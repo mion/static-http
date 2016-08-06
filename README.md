@@ -16,7 +16,7 @@ And navigate to your folder with `cd` and then:
   
 Now that you've got a static HTTP server running on port 3600, point your browser at `http://localhost:3600/awesome.html` and voilà!
 
-### port
+### Choose another port
 
 If you want to specify another port:
 
