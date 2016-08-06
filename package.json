@@ -1,20 +1,21 @@
 {
-  "name": "simple-static-server",
+  "name": "static-http",
   "version": "1.0.0",
-  "description": "Serve static files locally with HTTP.",
+  "description": "Serve static files with HTTP.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "simple-static-server": "server.js"
+    "static-http": "server.js"
   },
   "keywords": [
     "http",
     "simple",
     "serve",
     "server",
-    "static"
+    "static",
+    "local"
   ],
   "author": "Gabriel Vieira",
   "license": "MIT",
