@@ -11,17 +11,22 @@ program
   .parse(process.argv);
 
 if (program.args.length === 0) {
-  console.log("[ERROR] You need to specify a directory.");
-  var makeRed = function (txt) { return colors.red(txt); };
-  program.outputHelp(makeRed);
+  console.error(colors.red("[ERROR] You need to specify a directory."));
+  program.outputHelp(function (txt) { return colors.yellow(txt); });
 } else {
   var app = express()
     , dir = program.args[0]
     , port = parseInt(program.port);
 
   app.use(express.static(dir));
-
   app.listen(port, function () {
-    console.log("[*] Static server running on port "+port+", serving files from: " + dir);
+    console.log(colors.green("[*] Static server running on port "+port+", serving files from: " + dir));
+  }).on("error", function (err) {
+    if (err.errno === "EADDRINUSE") {
+      console.error(colors.red("[ERROR] The specified port " + port + " is already in use."));
+      console.log(colors.yellow("Please, choose another port."));
+    } else {
+      console.error(colors.red("[ERROR] An error occurred while trying to listen on port " + port + ":\n" + err));
+    }
   });
 }
