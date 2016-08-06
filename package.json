@@ -16,6 +16,7 @@
   "author": "Gabriel Vieira",
   "license": "MIT",
   "dependencies": {
+    "commander": "^2.9.0",
     "express": "^4.14.0"
   }
 }
