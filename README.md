@@ -14,7 +14,7 @@ And navigate to your folder with `cd` and then:
     $ static-http `pwd`
     > [*] Static server running on port 3600, serving files from: path-to/my-awesome-folder
   
-Now that you've got a static HTTP server running on port 3600, point your browser at `http://localhost:3600/awesome.html` and voilà!
+Now that you've got a static HTTP server running on port 3600 (default), point your browser at `http://localhost:3600/awesome.html` and voilà!
 
 ### Choose another port
 
@@ -28,5 +28,5 @@ Or:
   
 If there's something running on the port you chose, it will let you know.
 
-    [ERROR] The specified port 3600 is already in use.
+    [ERROR] The specified port 1234 is already in use.
     Please, choose another port.
