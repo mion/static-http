@@ -1,7 +1,7 @@
 {
   "name": "static-http",
-  "version": "1.0.0",
-  "description": "Serve static files with HTTP.",
+  "version": "2.0.0",
+  "description": "Quickly create an HTTP server from a folder to test stuff on 'localhost'. Only 3 dependencies, uses Express.js under the hood.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
