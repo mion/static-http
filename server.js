@@ -18,6 +18,9 @@ if (program.args.length === 0) {
     , dir = program.args[0]
     , port = parseInt(program.port);
 
+  // fix NaN port bug
+  if (!port) port = 3600;
+
   app.use(express.static(dir));
   app.listen(port, function () {
     console.log(colors.green("[*] Static server running on port "+port+", serving files from: " + dir));
